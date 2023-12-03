@@ -21,11 +21,11 @@ CREATE Table Kelas(
 );
 
 CREATE Table Mahasiswa(
-    nrp           char(10) NOT NULL
+    mhs_nrp           char(10) NOT NULL
     mhs_nama      VARCHAR(60) NOT NULL
     mhs_email     VARCHAR(100)  NOT NULL
     mhs_jurusan   VARCHAR(30) NOT NULL
-    PRIMARY KEY (nrp)
+    PRIMARY KEY (mhs_nrp)
 );
 
 CREATE Table Private_File(
@@ -33,6 +33,7 @@ CREATE Table Private_File(
     pf_nama           VARCHAR(30) NOT NULL
     pf_jenis          VARCHAR(5) NOT NULL
     pf_tanggal_upload datetime NOT NULL
+    PRIMARY KEY (pf_id)
 );
 
 CREATE Table Sesi_Pertemuan(
@@ -43,6 +44,7 @@ CREATE Table Sesi_Pertemuan(
     sp_file             VARCHAR(30)
     sp_tugas            VARCHAR(30)
     sp_lampiran         VARCHAR(30)
+    PRIMARY KEY (s_id)
 );
 
 CREATE Table Detail_Tugas(
@@ -57,10 +59,15 @@ CREATE Table Detail_Tugas(
     t_tanggal_pengumpulan_terakhir  datetime NOT NULL
     t_file_dikumpulkan              VARCHAR(30) NOT NULL
     t_comment                       VARCHAR(30) NOT NULL
+    PRIMARY KEY(t_id)
 );
 
 CREATE Table File(
-
+    f_id char(10) NOT NULL
+    f_nama int NOT NULL
+    f_jenis VARCHAR(5) NOT NULL
+    f_tanggal_upload datetime NOT NULL
+    PRIMARY KEY (f_id)
 );
 
 
