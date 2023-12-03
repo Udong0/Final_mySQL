@@ -46,7 +46,17 @@ CREATE Table Sesi_Pertemuan(
 );
 
 CREATE Table Detail_Tugas(
-
+    t_id                            char(8) NOT NULL
+    t_nama                          VARCHAR(30) NOT NULL
+    t_deskripsi                     Text NOT NULL
+    t_tanggal_dibuat                datetime NOT NULL
+    t_deadline_tugas                datetime NOT NULL
+    t_file_lampiran                 integer NOT NULL
+    t_status_tugas                  VARCHAR(10) NOT NULL
+    t_nilai_tugas                   integer NOT NULL    
+    t_tanggal_pengumpulan_terakhir  datetime NOT NULL
+    t_file_dikumpulkan              VARCHAR(30) NOT NULL
+    t_comment                       VARCHAR(30) NOT NULL
 );
 
 CREATE Table File(
