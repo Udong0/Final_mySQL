@@ -90,7 +90,9 @@ CREATE Table Detail_Tugas(
     t_tanggal_pengumpulan_terakhir  datetime ,
     t_file_dikumpulkan              VARCHAR(30) ,
     t_comment                       VARCHAR(30) ,
-    PRIMARY KEY(t_id)
+    Sesi_Pertemuan_s_ID             char(8)     NOT NULL,
+    PRIMARY KEY(t_id),
+    FOREIGN KEY(Sesi_Pertemuan_s_ID) References Sesi_Pertemuan(s_ID)
 );
 
 COMMIT;
