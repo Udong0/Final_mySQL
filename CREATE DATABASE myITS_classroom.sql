@@ -22,7 +22,7 @@ CREATE Table Mahasiswa(
     mhs_email VARCHAR(100)  NOT NULL,
     mhs_jurusan VARCHAR(30) NOT NULL,
     Private_File_pf_ID char(8) NOT NULL,
-    PRIMARY KEY (nrp),
+    PRIMARY KEY (mhs_nrp),
     FOREIGN KEY (Private_File_pf_ID) REFERENCES Private_File(pf_id)
 );
 
