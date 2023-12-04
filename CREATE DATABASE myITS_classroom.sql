@@ -37,7 +37,7 @@ CREATE Table Files(
 CREATE Table Sesi_Pertemuan(
     s_id                char(8)     NOT NULL
     s_nama              VARCHAR(30) NOT NULL
-    sp_deskripsi        Text        NOT NULL
+    sp_deskripsi        Text        
     sp_tanggal_dibuat   date        NOT NULL
     sp_file             VARCHAR(30)
     sp_tugas            VARCHAR(30)
@@ -92,6 +92,8 @@ CREATE Table Detail_Tugas(
     t_comment                       VARCHAR(30) NOT NULL
     PRIMARY KEY(t_id)
 );
+
+COMMIT;
 
 
 
