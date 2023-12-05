@@ -31,7 +31,10 @@ CREATE Table Files(
     f_nama int NOT NULL,
     f_jenis VARCHAR(5) NOT NULL,
     f_tanggal_upload datetime NOT NULL,
-    PRIMARY KEY (f_id)
+    f_s_id char(8)     NOT NULL,
+    PRIMARY KEY (f_id),
+    FOREIGN KEY (f_s_id) REFERENCES Sesi_Pertemuan(s_id)
+
 );
 
 CREATE Table Sesi_Pertemuan(
@@ -41,10 +44,8 @@ CREATE Table Sesi_Pertemuan(
     sp_tanggal_dibuat   date        NOT NULL,
     sp_file             VARCHAR(30),
     sp_tugas            VARCHAR(30),
-    sp_lampiran         VARCHAR(30),
-    Files_f_ID           char(10)    NOT NULL,
+    sp_lampiran         VARCHAR(30)
     PRIMARY KEY (s_id),
-    FOREIGN KEY (Files_f_ID) REFERENCES Files(f_id)
 );
 
 CREATE Table Kelas(
