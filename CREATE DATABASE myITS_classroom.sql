@@ -67,15 +67,10 @@ CREATE Table Mata_Kuliah(
     mk_nama VARCHAR(30) NOT NULL,
     mk_semester VARCHAR(5) NOT NULL,
     Kelas_kls_ID  char(8)  NOT NULL,
+    mk_NIDN char(10) NOT NULL,
     PRIMARY KEY (mk_id),
-    FOREIGN KEY (Kelas_kls_ID) REFERENCES Kelas(kls_id)
-);
-
-CREATE Table Mata_Kuliah_Dosen(
-    Mata_Kuliah_mk_ID   char(8) NOT NULL,
-    Dosen_NIDN          char(10) NOT NULL,
-    FOREIGN KEY (Mata_Kuliah_mk_ID) REFERENCES Mata_Kuliah(mk_id),
-    FOREIGN KEY (Dosen_NIDN) REFERENCES Dosen(NIDN)
+    FOREIGN KEY (Kelas_kls_ID) REFERENCES Kelas(kls_id),
+    FOREIGN KEY (mk_NIDN) REFERENCES Dosen(NIDN)
 );
 
 CREATE Table Detail_Tugas(
