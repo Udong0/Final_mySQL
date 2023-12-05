@@ -12,8 +12,10 @@ CREATE Table Private_File(
     pf_id char(8) NOT NULL,
     pf_nama VARCHAR(30) NOT NULL,
     pf_jenis VARCHAR(5) NOT NULL,
-    pf_tanggal_upload datetime NOT NULL,
-    PRIMARY KEY (pf_id)
+    pf_tanggal_upload datetime NOT NULL,  
+    pf_mhs_nrp char(10) NOT NULL,
+    PRIMARY KEY (pf_id),
+    FOREIGN KEY (pf_mhs_nrp) REFERENCES Mahasiswa(mhs_nrp)
 );
 
 CREATE Table Mahasiswa(
@@ -21,9 +23,7 @@ CREATE Table Mahasiswa(
     mhs_nama VARCHAR(60) NOT NULL,
     mhs_email VARCHAR(100)  NOT NULL,
     mhs_jurusan VARCHAR(30) NOT NULL,
-    Private_File_pf_ID char(8) NOT NULL,
-    PRIMARY KEY (mhs_nrp),
-    FOREIGN KEY (Private_File_pf_ID) REFERENCES Private_File(pf_id)
+    PRIMARY KEY (mhs_nrp)
 );
 
 CREATE Table Files(
