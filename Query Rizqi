@@ -19,7 +19,6 @@ SELECT mk_semester, COUNT(*) as jumlah_mata_kuliah
 FROM Mata_Kuliah
 GROUP BY mk_semester
 ORDER BY jumlah_mata_kuliah DESC
-LIMIT 1;
 
 --Query Kompleks :
 --1. Menampilkan data dosen yang memegang mata kuliah terbanyak. 
