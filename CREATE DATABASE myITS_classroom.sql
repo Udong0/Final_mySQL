@@ -96,7 +96,7 @@ CREATE TABLE Pengumpulan(
     PRIMARY KEY (p_id),
     FOREIGN KEY (tugas_t_id) REFERENCES Tugas(t_id),
     FOREIGN KEY (Mahasiswa_nrp) REFERENCES Mahasiswa(nrp)
-    FOREIGN KEY (Tugas_t_id) REFERENCES Tugas(t_id)
+   
 );
 
 COMMIT;
