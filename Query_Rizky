@@ -1,0 +1,21 @@
+-- Menampilkan Seluruh Kelas
+SELECT * FROM Kelas;
+
+-- Menampilkan sesi pertemuan terbaru
+SELECT * FROM Sesi_Pertemuan
+ORDER BY sp_tanggal_dibuat DESC
+LIMIT 1;
+
+-- Menampilkan mata kuliah dengan Id yang diawali “EF”
+SELECT * FROM Mata_Kuliah
+WHERE mk_id LIKE 'EF%';
+
+-- Menampilkan kelas dengan nama yang diawali dengan “Kelas P”
+SELECT * FROM Kelas
+WHERE kls_nama LIKE 'Kelas P%';
+
+-- Menampilkan sesi pertemuan antara 01-07-2023 hingga 31-12-2023
+SELECT * FROM Sesi_Pertemuan
+WHERE sp_tanggal_dibuat BETWEEN '2023-07-01' AND '2023-12-31';
+
+
