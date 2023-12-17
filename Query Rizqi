@@ -1,0 +1,62 @@
+--Query sederhana :
+--1. Menampilkan seluruh data dosen 
+SELECT * FROM Dosen;
+
+--2. Menampilkan data dosen yang berawalan huruf A 
+SELECT * FROM Dosen
+WHERE dsn_nama LIKE 'A%';
+
+--3. Menampilkan data kelas pada semester gasal 
+SELECT * FROM Kelas
+WHERE kls_semester = 'Gasal';
+
+--4. Menampilkan data kelas pada semester genap
+SELECT * FROM Kelas
+WHERE kls_semester = 'Genap';
+
+--5. Menampilkan semester dengan mata kuliah terbanyak
+SELECT mk_semester, COUNT(*) as jumlah_mata_kuliah
+FROM Mata_Kuliah
+GROUP BY mk_semester
+ORDER BY jumlah_mata_kuliah DESC
+LIMIT 1;
+
+--Query Kompleks :
+--1. Menampilkan data dosen yang memegang mata kuliah terbanyak. 
+SELECT d.NIDN, d.dsn_nama, COUNT(*) AS jumlah_mata_kuliah
+FROM Dosen d
+JOIN Kelas_Dosen kd ON d.NIDN = kd.kd_Dosen_NIDN
+GROUP BY d.NIDN, d.dsn_nama
+ORDER BY jumlah_mata_kuliah DESC
+LIMIT 1;
+
+--2. Menampilkan kelas yang diajar oleh dosen berawalan huruf A.
+SELECT k.*, m.mk_nama 
+FROM Kelas k 
+JOIN Kelas_Dosen kd ON k.kls_id = kd.kd_Kelas_kls_ID 
+JOIN Dosen d ON kd.kd_Dosen_NIDN = d.NIDN 
+JOIN Mata_Kuliah m ON k.Mata_Kuliah_mk_ID = m.mk_id 
+WHERE d.dsn_nama LIKE 'A%' 
+ORDER BY k.kls_id;
+
+--3. Menampilkan data dosen serta jumlah matkul yang dipegang.
+SELECT d.NIDN, d.dsn_nama, COUNT(kd.kd_Kelas_kls_ID) AS jumlah_matkul
+FROM Dosen d
+LEFT JOIN Kelas_Dosen kd ON d.NIDN = kd.kd_Dosen_NIDN
+GROUP BY d.NIDN, d.dsn_nama
+ORDER BY jumlah_matkul DESC;
+
+--4. Menampilkan jumlah dari kelas setiap matkulnya.
+SELECT m.mk_id, m.mk_nama, COUNT(k.kls_id) AS jumlah_kelas
+FROM Mata_Kuliah m
+LEFT JOIN Kelas k ON m.mk_id = k.Mata_Kuliah_mk_ID
+GROUP BY m.mk_id, m.mk_nama
+ORDER BY jumlah_kelas DESC;
+
+--5. Menampilkan kelas dengan mahasiswa paling sedikit.
+SELECT k.kls_id, k.kls_nama, COUNT(km.km_Mahasiswa_nrp) AS jumlah_mahasiswa
+FROM Kelas k
+LEFT JOIN Kelas_Mahasiswa km ON k.kls_id = km.km_Kelas_kls_ID
+GROUP BY k.kls_id, k.kls_nama
+ORDER BY jumlah_mahasiswa ASC
+LIMIT 1;
