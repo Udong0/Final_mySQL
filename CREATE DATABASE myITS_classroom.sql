@@ -91,10 +91,10 @@ CREATE TABLE Pengumpulan(
     p_tanggal_pengumpulan_terakhir  DATETIME,
     p_file_dikumpulkan              VARCHAR(255),
     p_comment                       VARCHAR(255),
-    Dosen_NIDN                      CHAR(10) NOT NULL,
     Mahasiswa_nrp                   CHAR(10) NOT NULL,
+    tugas_t_id                            CHAR(8) NOT NULL,
     PRIMARY KEY (p_id),
-    FOREIGN KEY (Dosen_NIDN) REFERENCES Dosen(NIDN),
+    FOREIGN KEY (tugas_t_id) REFERENCES Tugas(t_id),
     FOREIGN KEY (Mahasiswa_nrp) REFERENCES Mahasiswa(nrp)
 );
 
