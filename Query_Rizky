@@ -33,8 +33,7 @@ SELECT k.kls_id, k.kls_nama, COUNT(km.km_Mahasiswa_nrp) AS jumlah_mahasiswa
 FROM Kelas k
 JOIN Kelas_Mahasiswa km ON k.kls_id = km.km_Kelas_kls_ID
 WHERE k.kls_semester = 'Gasal'
-GROUP BY k.kls_id, k.kls_nama
-ORDER BY jumlah_mahasiswa DESC;
+GROUP BY k.kls_id, k.kls_nama;
 
 -- Menampilkan mata kuliah yang diikuti mahasiswa bernama “Lionel Messi”
 SELECT mk.*
