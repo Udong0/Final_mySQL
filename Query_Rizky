@@ -18,4 +18,36 @@ WHERE kls_nama LIKE 'Kelas P%';
 SELECT * FROM Sesi_Pertemuan
 WHERE sp_tanggal_dibuat BETWEEN '2023-07-01' AND '2023-12-31';
 
+-- Menampilkan banyak dosen
+SELECT COUNT(*) AS jumlah_dosen
+FROM Dosen;
 
+-- Menammpilkan mahsiswa status pengumpulan tugas "Selesai"
+SELECT m.*
+FROM Mahasiswa m
+JOIN Pengumpulan p ON m.nrp = p.Mahasiswa_nrp
+WHERE p.p_status_tugas = 'Selesai';
+
+-- Menampilkan banyak mahasiswa dalam kelas dengan semester “Gasal”
+SELECT k.kls_id, k.kls_nama, COUNT(km.km_Mahasiswa_nrp) AS jumlah_mahasiswa
+FROM Kelas k
+JOIN Kelas_Mahasiswa km ON k.kls_id = km.km_Kelas_kls_ID
+WHERE k.kls_semester = 'Gasal'
+GROUP BY k.kls_id, k.kls_nama
+ORDER BY jumlah_mahasiswa DESC;
+
+-- Menampilkan mata kuliah yang diikuti mahasiswa bernama “Lionel Messi”
+SELECT mk.*
+FROM Mahasiswa m
+JOIN Kelas_Mahasiswa km ON m.nrp = km.km_Mahasiswa_nrp
+JOIN Kelas k ON km.km_Kelas_kls_ID = k.kls_id
+JOIN Mata_Kuliah mk ON k.Mata_Kuliah_mk_ID = mk.mk_id
+WHERE m.mhs_nama = 'Lionel Messi';
+
+-- Menampilkan mahasiswa yang mengikuti sesi pertemuan sebelum 1 Juli 2023
+SELECT DISTINCT m.*
+FROM Mahasiswa m
+JOIN Kelas_Mahasiswa km ON m.nrp = km.km_Mahasiswa_nrp
+JOIN Kelas k ON km.km_Kelas_kls_ID = k.kls_id
+JOIN Sesi_Pertemuan sp ON k.kls_id = sp.Kelas_kls_ID
+WHERE sp.sp_tanggal_dibuat < '2023-07-01';
