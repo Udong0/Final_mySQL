@@ -137,18 +137,18 @@ VALUES
 
 
 -- Insert dummy data into Pengumpulan table
-INSERT INTO Pengumpulan (p_id, p_nama, p_deskripsi, p_deadline_tugas, p_file_lampiran, p_status_tugas, p_nilai_tugas, p_tanggal_pengumpulan_terakhir, p_file_dikumpulkan, p_comment, Dosen_NIDN, Mahasiswa_nrp)
+INSERT INTO Pengumpulan (p_id, p_nama, p_deskripsi, p_deadline_tugas, p_file_lampiran, p_status_tugas, p_nilai_tugas, p_tanggal_pengumpulan_terakhir, p_file_dikumpulkan, p_comment, Tugas_t_id, Mahasiswa_nrp)
 VALUES
-('P001', 'Pengumpulan Tugas Pemrograman Web', 'Pengumpulan tugas pemrograman web telah berhasil.', '2023-01-30 23:59:59', 1, 'Selesai', 85, '2023-01-30 12:00:00', 'Tugas1.pdf', 'Pengumpulan berhasil', '1234567890', '1010101010'),
-('P002', 'Pengumpulan Tugas Manajemen Strategis', 'Pengumpulan tugas manajemen strategis belum selesai.', '2023-02-28 23:59:59', 2, 'Belum Selesai', NULL, NULL, NULL, NULL, '2345678901', '2020202020'),
-('P003', 'Pengumpulan Tugas Komunikasi Bisnis', 'Pengumpulan tugas komunikasi bisnis belum selesai.', '2023-03-31 23:59:59', 3, 'Belum Selesai', NULL, NULL, NULL, NULL, '3456789012', '3030303030'),
-('P004', 'Pengumpulan Tugas Desain Grafis', 'Pengumpulan tugas desain grafis telah berhasil.', '2023-04-30 23:59:59', 4, 'Selesai', 92, '2023-04-30 12:00:00', 'Poster4.png', 'Pengumpulan berhasil', '4567890123', '4040404040'),
-('P005', 'Pengumpulan Tugas Arsitektur Komputer', 'Pengumpulan tugas arsitektur komputer telah berhasil.', '2023-05-31 23:59:59', 5, 'Selesai', 88, '2023-05-31 12:00:00', 'Laporan5.docx', 'Pengumpulan berhasil', '5678901234', '5050505050'),
-('P006', 'Pengumpulan Tugas Sistem Basis Data', 'Pengumpulan tugas sistem basis data belum selesai.', '2023-06-30 23:59:59', 6, 'Belum Selesai', NULL, NULL, NULL, NULL, '6789012345', '6060606060'),
-('P007', 'Pengumpulan Tugas Sistem Kontrol Elektrik', 'Pengumpulan tugas sistem kontrol elektrik telah berhasil.', '2023-07-31 23:59:59', 7, 'Selesai', 90, '2023-07-31 12:00:00', 'Rancangan7.ai', 'Pengumpulan berhasil', '7890123456', '7070707070'),
-('P008', 'Pengumpulan Tugas Ekonomi Makro', 'Pengumpulan tugas ekonomi makro telah berhasil.', '2023-08-31 23:59:59', 8, 'Selesai', 95, '2023-08-31 12:00:00', 'Makro8.xlsx', 'Pengumpulan berhasil', '8901234567', '8080808080'),
-('P009', 'Pengumpulan Tugas Psikologi Sosial', 'Pengumpulan tugas psikologi sosial telah berhasil.', '2023-09-30 23:59:59', 9, 'Selesai', 87, '2023-09-30 12:00:00', 'Skripsi9.docx', 'Pengumpulan berhasil', '9012345678', '9090909090'),
-('P010', 'Pengumpulan Tugas Akuntansi Keuangan', 'Pengumpulan tugas akuntansi keuangan belum selesai.', '2023-10-31 23:59:59', 10, 'Belum Selesai', NULL, NULL, NULL, NULL, '0123456789', '0101010101');
+('P001', 'Pengumpulan Tugas Pemrograman Web', 'Pengumpulan tugas pemrograman web telah berhasil.', '2023-01-30 23:59:59', 1, 'Selesai', 85, '2023-01-30 12:00:00', 'Tugas1.pdf', 'Pengumpulan berhasil', 'T001', '1010101010'),
+('P002', 'Pengumpulan Tugas Manajemen Strategis', 'Pengumpulan tugas manajemen strategis belum selesai.', '2023-02-28 23:59:59', 2, 'Belum Selesai', NULL, NULL, NULL, NULL, 'T002', '2020202020'),
+('P003', 'Pengumpulan Tugas Komunikasi Bisnis', 'Pengumpulan tugas komunikasi bisnis belum selesai.', '2023-03-31 23:59:59', 3, 'Belum Selesai', NULL, NULL, NULL, NULL, 'T003', '3030303030'),
+('P004', 'Pengumpulan Tugas Desain Grafis', 'Pengumpulan tugas desain grafis telah berhasil.', '2023-04-30 23:59:59', 4, 'Selesai', 92, '2023-04-30 12:00:00', 'Poster4.png', 'Pengumpulan berhasil', 'T004', '4040404040'),
+('P005', 'Pengumpulan Tugas Arsitektur Komputer', 'Pengumpulan tugas arsitektur komputer telah berhasil.', '2023-05-31 23:59:59', 5, 'Selesai', 88, '2023-05-31 12:00:00', 'Laporan5.docx', 'Pengumpulan berhasil', 'T005', '5050505050'),
+('P006', 'Pengumpulan Tugas Sistem Basis Data', 'Pengumpulan tugas sistem basis data belum selesai.', '2023-06-30 23:59:59', 6, 'Belum Selesai', NULL, NULL, NULL, NULL, 'T006', '6060606060'),
+('P007', 'Pengumpulan Tugas Sistem Kontrol Elektrik', 'Pengumpulan tugas sistem kontrol elektrik telah berhasil.', '2023-07-31 23:59:59', 7, 'Selesai', 90, '2023-07-31 12:00:00', 'Rancangan7.ai', 'Pengumpulan berhasil', 'T007', '7070707070'),
+('P008', 'Pengumpulan Tugas Ekonomi Makro', 'Pengumpulan tugas ekonomi makro telah berhasil.', '2023-08-31 23:59:59', 8, 'Selesai', 95, '2023-08-31 12:00:00', 'Makro8.xlsx', 'Pengumpulan berhasil', 'T008', '8080808080'),
+('P009', 'Pengumpulan Tugas Psikologi Sosial', 'Pengumpulan tugas psikologi sosial telah berhasil.', '2023-09-30 23:59:59', 9, 'Selesai', 87, '2023-09-30 12:00:00', 'Skripsi9.docx', 'Pengumpulan berhasil', 'T009', '9090909090'),
+('P010', 'Pengumpulan Tugas Akuntansi Keuangan', 'Pengumpulan tugas akuntansi keuangan belum selesai.', '2023-10-31 23:59:59', 10, 'Belum Selesai', NULL, NULL, NULL, NULL, 'T010', '0101010101');
 
 
 
