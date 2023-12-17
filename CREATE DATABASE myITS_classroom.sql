@@ -82,11 +82,11 @@ CREATE TABLE Tugas(
 
 CREATE TABLE Pengumpulan(
     p_id                            CHAR(8) NOT NULL,
-    p_nama                          VARCHAR(30) NOT NULL,
+    p_nama                          VARCHAR(60) NOT NULL,
     p_deskripsi                     TEXT,
     p_deadline_tugas                DATETIME,
     p_file_lampiran                 VARCHAR(255),
-    p_status_tugas                  VARCHAR(10) NOT NULL,
+    p_status_tugas                  VARCHAR(30) NOT NULL,
     p_nilai_tugas                   INTEGER NOT NULL,    
     p_tanggal_pengumpulan_terakhir  DATETIME,
     p_file_dikumpulkan              VARCHAR(255),
