@@ -49,13 +49,13 @@ VALUES
 
 ('K001', 'Kelas Pemrograman Web', 'Genap', '2023/2024', 'M001'),
 ('K002', 'Kelas Manajemen Strategis', 'Genap', '2023/2024', 'M002'),
-('K003', 'Kelas Komunikasi Bisnis', 'Ganjil', '2023/2024', 'M003'),
+('K003', 'Kelas Komunikasi Bisnis', 'Gasal', '2023/2024', 'M003'),
 ('K004', 'Kelas Desain Grafis', 'Genap', '2023/2024', 'M004'),
-('K005', 'Kelas Arsitektur Komputer', 'Ganjil', '2023/2024', 'M005'),
+('K005', 'Kelas Arsitektur Komputer', 'Gasal', '2023/2024', 'M005'),
 ('K006', 'Kelas Sistem Basis Data', 'Genap', '2023/2024', 'M006'),
 ('K007', 'Kelas Sistem Kontrol Elektrik', 'Genap', '2023/2024', 'M007'),
-('K008', 'Kelas Ekonomi Makro', 'Ganjil', '2023/2024', 'M008'),
-('K009', 'Kelas Psikologi Sosial', 'Ganjil', '2023/2024', 'M009'),
+('K008', 'Kelas Ekonomi Makro', 'Gasal', '2023/2024', 'M008'),
+('K009', 'Kelas Psikologi Sosial', 'Gasal', '2023/2024', 'M009'),
 ('K010', 'Kelas Akuntansi Keuangan', 'Genap', '2023/2024', 'M010');
 
 
