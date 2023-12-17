@@ -18,7 +18,7 @@ CREATE TABLE Mahasiswa(
 CREATE TABLE Mata_Kuliah(
     mk_id       CHAR(8) NOT NULL,
     mk_nama     VARCHAR(30) NOT NULL,
-    mk_semester VARCHAR(5) NOT NULL,
+    mk_semester VARCHAR(11) NOT NULL,
     PRIMARY KEY (mk_id)
 );
 
