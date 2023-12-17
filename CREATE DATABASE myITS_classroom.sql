@@ -92,7 +92,7 @@ CREATE TABLE Pengumpulan(
     p_file_dikumpulkan              VARCHAR(255),
     p_comment                       VARCHAR(255),
     Mahasiswa_nrp                   CHAR(10) NOT NULL,
-    tugas_t_id                            CHAR(8) NOT NULL,
+    Tugas_t_id                            CHAR(8) NOT NULL,
     PRIMARY KEY (p_id),
     FOREIGN KEY (tugas_t_id) REFERENCES Tugas(t_id),
     FOREIGN KEY (Mahasiswa_nrp) REFERENCES Mahasiswa(nrp)
